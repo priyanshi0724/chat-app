@@ -1,0 +1,273 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.join-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f1f2f5 0%, #efd899 100%);
+  padding: 20px;
+}
+
+.app-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.join-form {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.username-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.username-input:focus {
+  outline: none;
+  border-color: #272a36;
+}
+
+.generate-btn {
+  padding: 14px 20px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.generate-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.join-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #ededef 0%, #3d2e4c 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.join-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(55, 55, 57, 0.4);
+}
+
+.join-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connection-status {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.connection-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.connected {
+  background: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.status-dot.disconnected {
+  background: #f44336;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.user-count {
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.typing-indicator {
+  padding: 8px 20px;
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  background: #f9f9f9;
+}
+
+.message-form {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.message-input {
+  flex: 1;
+  padding: 14px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.message-input:focus {
+  outline: none;
+  border-color: #3f3f43;
+}
+
+.send-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #f1f2f4 0%, #47345b 100%);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.send-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .chat-container {
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .app-title {
+    font-size: 1.8rem;
+  }
+
+  .join-form {
+    padding: 30px 20px;
+  }
+
+  .chat-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .header-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .message-form {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .message-input {
+    padding: 12px 16px;
+  }
+
+  .send-btn {
+    padding: 12px 20px;
+  }
+}
