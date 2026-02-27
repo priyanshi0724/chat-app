@@ -112,3 +112,6 @@ MIT
 
 
 #OUTPUT
+
+<img width="1815" height="997" alt="Image" src="https://github.com/user-attachments/assets/ce41ff1a-694a-4c0a-9bb5-b6571a8f5625" />
+
