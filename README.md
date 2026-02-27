@@ -1,4 +1,17 @@
 # Real-Time Chat Application
+-----------------------------------------------------------------------------------------------------------------------------
+
+COMPANY : Codtech IT Solutions Private Limited
+
+NAME : Priyanshi Tak
+
+INTERN ID : CTIS3339
+
+DOMAIN : Frontend Web Development
+
+DURATION : 6 WEEKS
+
+MENTOR : Neela Santhosh Kumar 
 
 A real-time chat application built with React.js and Socket.io.
 
@@ -96,3 +109,6 @@ react/
 ## License
 
 MIT
+
+
+#OUTPUT
